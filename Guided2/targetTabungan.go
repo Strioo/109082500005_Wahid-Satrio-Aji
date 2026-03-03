@@ -1,0 +1,24 @@
+package main
+import "fmt"
+
+func main(){
+	var target, tabungan, total, hari int
+
+	fmt.Print("Masukkan target uang yang ingin dicapai: ")
+	fmt.Scanln(&target)
+
+	total = 0
+	hari = 0
+
+	for total < target {
+		hari++
+		fmt.Printf("Masukkan nominal tabungan hari ke %d: ", hari)
+		fmt.Scanln(&tabungan)
+
+		total = total + tabungan
+	}
+
+	//output
+	fmt.Printf("Selamat! Target Tercaoai dalam %d hari.\n", hari)
+	fmt.Printf("Total Tabungan anda Terkkumpul Rp%d\n", total)
+}
