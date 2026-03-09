@@ -19,6 +19,6 @@ func main(){
 	}
 
 	//output
-	fmt.Printf("Selamat! Target Tercaoai dalam %d hari.\n", hari)
+	fmt.Printf("Selamat! Target Tercapai dalam %d hari.\n", hari)
 	fmt.Printf("Total Tabungan anda Terkkumpul Rp%d\n", total)
 }

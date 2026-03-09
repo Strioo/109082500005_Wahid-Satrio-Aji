@@ -2,10 +2,6 @@ package main
 
 import "fmt"
 
-func checkColor(c1, c2, c3, c4 string) bool {
-	return c1 == "merah" && c2 == "kuning" && c3 == "hijau" && c4 == "ungu"
-}
-
 func main() {
 	var c1, c2, c3, c4 string
 	result := true
@@ -14,7 +10,7 @@ func main() {
 		fmt.Printf("Percobaan %d : ", i)
 		fmt.Scan(&c1, &c2, &c3, &c4)
 
-		if !checkColor(c1, c2, c3, c4) {
+		if !(c1 == "merah" && c2 == "kuning" && c3 == "hijau" && c4 == "ungu") {
 			result = false
 		}
 	}

@@ -2,12 +2,18 @@ package main
 
 import "fmt"
 
-func hitungBiaya(gram int) (kg, sisa, biayaKg, biayaSisa, total int) {
-	kg = gram / 1000
-	sisa = gram % 1000
+func main() {
+	var gram int
 
-	biayaKg = kg * 10000
+	fmt.Print("Masukkan total berat (gram): ")
+	fmt.Scan(&gram)
 
+	kg := gram / 1000
+	sisa := gram % 1000
+
+	biayaKg := kg * 10000
+
+	var biayaSisa int
 	if kg > 10 {
 		biayaSisa = 0
 	} else if sisa >= 500 {
@@ -16,17 +22,7 @@ func hitungBiaya(gram int) (kg, sisa, biayaKg, biayaSisa, total int) {
 		biayaSisa = sisa * 15
 	}
 
-	total = biayaKg + biayaSisa
-	return
-}
-
-func main() {
-	var gram int
-
-	fmt.Print("Masukkan total berat (gram): ")
-	fmt.Scan(&gram)
-
-	kg, sisa, biayaKg, biayaSisa, total := hitungBiaya(gram)
+	total := biayaKg + biayaSisa
 
 	fmt.Println()
 	fmt.Println("===== Detail Perhitungan =====")
